@@ -13,7 +13,7 @@ double Dichotomy::evaluate() {
 
     while (eps_n > eps) {
         double x1 = find_x(a, b, delta), x2  = find_x(a, b, -delta);
-        if (function.evaluate(x1) <= function.evaluate(x2)) {
+        if (Function::evaluate(x1) <= Function::evaluate(x2)) {
             this->b = x2;
         } else {
             this->a = x1;
