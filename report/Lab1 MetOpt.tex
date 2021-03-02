@@ -1,0 +1,62 @@
+\documentclass[a4paper, 42pt]{report}
+
+
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{color}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+
+
+\title{MetOptLab 1}
+\author{Sergey Efimov Alexander Sokolov}
+\date{February 2021}
+
+\begin{document}
+
+	\maketitle
+
+	\section*{Постановка задачи}
+	Задача лаборатрной работы  -- научиться реализовывать алгоритмы одномерной минимизации функции каждым из следуших способов:
+	\begin{enumerate}
+		\item Метод дихотомии
+		\item Метод золотого сечения
+		\item Метод Фиббоначи
+		\item Метод парабол
+		\item Комбинированный метод Брента
+	\end{enumerate}
+	Также необходимо решить задачу аналитически и привести отчет по результатам сравнения проведенных вычислений
+	\section*{Ход работы}
+	Исследуемая функция \[f(x) = x - ln(x)\] Интервал исследования [0.5, 4]
+	\subsection*{1. Аналитическое решение}
+	Для наглядности приведем график функции на заданном интервале:
+
+	\begin{tikzpicture}
+		\begin{axis}[
+			title = x - ln(x),
+			xlabel = {$x$},
+			ylabel = {$y$},
+			minor tick num = 2,
+			xmin = 0.5,
+			xmax = 4
+		]
+			\addplot[red] {x - ln(x)};
+		\end{axis}
+	\end{tikzpicture}
+
+	Чтобы найти $/min$ функции необходимо найти ее критические точки(точки, в которых производная функции равна нуля $f'(x) = 0$):
+	\[f'(x) = (x - \ln(x))' = x' - \ln(x)' = 0\]
+	\[1 - \frac{1}{x} = 0 \Rightarrow x = 1\]
+	Итак, мы нашли критическую точку, теперь осталось сравнить три значения функции -- в критической точке и в точках, являющиеся концами исследуемного отрезка. Пусть $x$ критическая точка, $a, b$ -начало и конец отрезка соответственно:
+	\[f(a) = 0.5 - \ln(0.5) \approx 0.5 + 0.6931  \approx 1.1931\]
+	\[f(b) = 4 - \ln(4) \approx 4 - 1.3863 \approx 2.6137\]
+	\[f(x) = 1 - \ln(1) = 1\]
+	Из приведенных выше вычислений можно утверждать, что $\min$ функции $f(x) = x - \ln(x)$ равен 1, при $x =1$, (точка $M(1,1)$)
+
+
+\end{document}
