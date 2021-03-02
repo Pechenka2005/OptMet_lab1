@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    Dichotomy res(0.5, 4, 0.00001, 0);
+    Dichotomy res(0.5, 4, 0.00001, 0.00000001);
     cout << res.evaluate() << endl;
     return 0;
 }
