@@ -3,4 +3,4 @@ project(1_lab)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(1_lab main.cpp Function.cpp Function.h Dichotomy.cpp Dichotomy.h)
+add_executable(1_lab main.cpp Function.cpp Function.h Dichotomy.cpp Dichotomy.h Parabola.cpp Parabola.h)

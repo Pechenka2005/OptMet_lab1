@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sj/CLionProjects/OptMet_lab1/src/Function.h
+
+/Users/sj/CLionProjects/OptMet_lab1/src/Parabola.cpp
+Parabola.h
+/Users/sj/CLionProjects/OptMet_lab1/src/Parabola.h
+
+/Users/sj/CLionProjects/OptMet_lab1/src/Parabola.h
+Function.h
+/Users/sj/CLionProjects/OptMet_lab1/src/Function.h
+
