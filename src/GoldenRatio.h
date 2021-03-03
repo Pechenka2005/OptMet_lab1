@@ -11,8 +11,9 @@
 class GoldenRatio : public Function {
 private:
     double a, b, eps;
-    static double find_x1(double a, double b);
-    static double find_x2(double a, double b);
+    const double tau = ((sqrt(5) - 1) / 2);
+    double find_x1(double a, double b) const;
+    double find_x2(double a, double b) const;
 
 public:
     GoldenRatio(double a, double b, double eps) {
