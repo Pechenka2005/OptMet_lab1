@@ -14,9 +14,9 @@ double Dichotomy::evaluate() {
     while (eps_n > eps) {
         double x1 = find_x(a, b, -delta), x2  = find_x(a, b, delta);
         if (Function::evaluate(x1) <= Function::evaluate(x2)) {
-            this->b = x2;
+            b = x2;
         } else {
-            this->a = x1;
+            a = x1;
         }
         eps_n = (b - a) / 2;
     }

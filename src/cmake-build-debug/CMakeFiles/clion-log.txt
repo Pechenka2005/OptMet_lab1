@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/sj/CLionProjects/OptMet_lab1/src
+"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\SoKoL\Desktop\metOpt\1_lab\src
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/sj/CLionProjects/OptMet_lab1/src/cmake-build-debug
+-- Build files have been written to: C:/Users/SoKoL/Desktop/metOpt/1_lab/src/cmake-build-debug

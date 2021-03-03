@@ -4,9 +4,11 @@
 
 #ifndef INC_1_LAB_GOLDENRATIO_H
 #define INC_1_LAB_GOLDENRATIO_H
+#include <cmath>
+#include "Function.h"
 
 
-class GoldenRatio {
+class GoldenRatio : public Function {
 private:
     double a, b, eps;
     static double find_x1(double a, double b);
