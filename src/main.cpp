@@ -2,7 +2,7 @@
 #include "Dichotomy.h"
 #include "Parabola.h"
 #include "GoldenRatio.h"
-#include "CombinedBrent.h"
+#include "Fibonacci.h"
 
 using namespace std;
 
@@ -13,7 +13,7 @@ int main() {
     cout << "The parabola method: " << res_p.evaluate() << endl;
     GoldenRatio res_gr(0.5, 4, 0.00000001);
     cout << "The golder ratio method: " << res_gr.evaluate() << endl;
-    CombinedBrent res_comBrant(0.5, 4, 0.0000001);
-    cout << "The Combined Brent method: " << res_comBrant.evaluate() << endl;
+    Fibonacci res_f(0.5, 4, 0.0000001);
+    cout << "The fibonacci method: " << res_f.evaluate() << endl;
     return 0;
 }
