@@ -9,6 +9,9 @@
 class Function {
 public:
     static double evaluate(double x);
+    static double sign(double x);
+    static bool equals(double x1, double x2);
+    static bool different(double a, double b, double c);
 };
 
 

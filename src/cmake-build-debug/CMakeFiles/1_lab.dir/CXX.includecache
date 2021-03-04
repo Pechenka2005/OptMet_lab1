@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sj/CLionProjects/OptMet_lab1/src/CombinedBrent.h
+Function.h
+/Users/sj/CLionProjects/OptMet_lab1/src/Function.h
+cmath
+-
+
+/Users/sj/CLionProjects/OptMet_lab1/src/Dichotomy.h
+Function.h
+/Users/sj/CLionProjects/OptMet_lab1/src/Function.h
+
+/Users/sj/CLionProjects/OptMet_lab1/src/Function.h
+
+/Users/sj/CLionProjects/OptMet_lab1/src/GoldenRatio.h
+cmath
+-
+Function.h
+/Users/sj/CLionProjects/OptMet_lab1/src/Function.h
+
+/Users/sj/CLionProjects/OptMet_lab1/src/Parabola.h
+Function.h
+/Users/sj/CLionProjects/OptMet_lab1/src/Function.h
+
+/Users/sj/CLionProjects/OptMet_lab1/src/main.cpp
+iostream
+-
+Dichotomy.h
+/Users/sj/CLionProjects/OptMet_lab1/src/Dichotomy.h
+Parabola.h
+/Users/sj/CLionProjects/OptMet_lab1/src/Parabola.h
+GoldenRatio.h
+/Users/sj/CLionProjects/OptMet_lab1/src/GoldenRatio.h
+CombinedBrent.h
+/Users/sj/CLionProjects/OptMet_lab1/src/CombinedBrent.h
+

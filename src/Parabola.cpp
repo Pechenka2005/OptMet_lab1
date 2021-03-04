@@ -19,18 +19,20 @@ double Parabola::evaluate() {
                 x3 = x2;
                 x2 = x_n;
             }
-        } else {
+        } else if(x1 < x2 && x2 < x_n && x2 < x3) {
             if (Function::evaluate(x_n) <= Function::evaluate(x2)) {
                 x1 = x2;
                 x2 = x_n;
             } else {
                 x3 = x_n;
             }
+        } else {
+            break;
         }
         eps_n = (x3 - x1) / 2;
     }
 
-    return x2;
+    return (x3 + x1) / 2;
 }
 
 double Parabola::find_a_1(double x1, double x2) {
@@ -38,8 +40,8 @@ double Parabola::find_a_1(double x1, double x2) {
 }
 
 double Parabola::find_a_2(double x1, double x2, double x3) {
-    return (Function::evaluate(x3) - Function::evaluate(x1)) / (x3 - x1) -
-    (Function::evaluate(x2) - Function::evaluate(x1)) / (x2 - x1);
+    return ((Function::evaluate(x3) - Function::evaluate(x1)) / (x3 - x1) -
+    (Function::evaluate(x2) - Function::evaluate(x1)) / (x2 - x1)) / (x3 - x2);
 }
 
 double Parabola::find_x_n(double x1, double x2, double x3) {

@@ -3,6 +3,7 @@
 #include "Parabola.h"
 #include "GoldenRatio.h"
 #include "Fibonacci.h"
+#include "CombinedBrent.h"
 
 using namespace std;
 
@@ -15,5 +16,7 @@ int main() {
     cout << "The golder ratio method: " << res_gr.evaluate() << endl;
     Fibonacci res_f(0.5, 4, 0.0000001);
     cout << "The fibonacci method: " << res_f.evaluate() << endl;
+    CombinedBrent res_cb(0.5, 4, 0.0000001);
+    cout << "The combinedBrent method: " << res_cb.evaluate() << endl;
     return 0;
 }
