@@ -8,7 +8,7 @@
 
 #include "Function.h"
 
-class Dichotomy : public Function {
+class Dichotomy : Function {
 private:
     double a, b, eps, delta;
     static double find_x(double a, double b, double delta);

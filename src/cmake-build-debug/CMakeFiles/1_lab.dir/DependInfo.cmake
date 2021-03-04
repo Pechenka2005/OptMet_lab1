@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/SoKoL/Desktop/metOpt/1_lab/src/CombinedBrent.cpp" "C:/Users/SoKoL/Desktop/metOpt/1_lab/src/cmake-build-debug/CMakeFiles/1_lab.dir/CombinedBrent.cpp.obj"
   "C:/Users/SoKoL/Desktop/metOpt/1_lab/src/Dichotomy.cpp" "C:/Users/SoKoL/Desktop/metOpt/1_lab/src/cmake-build-debug/CMakeFiles/1_lab.dir/Dichotomy.cpp.obj"
+  "C:/Users/SoKoL/Desktop/metOpt/1_lab/src/Fibonacci.cpp" "C:/Users/SoKoL/Desktop/metOpt/1_lab/src/cmake-build-debug/CMakeFiles/1_lab.dir/Fibonacci.cpp.obj"
   "C:/Users/SoKoL/Desktop/metOpt/1_lab/src/Function.cpp" "C:/Users/SoKoL/Desktop/metOpt/1_lab/src/cmake-build-debug/CMakeFiles/1_lab.dir/Function.cpp.obj"
   "C:/Users/SoKoL/Desktop/metOpt/1_lab/src/GoldenRatio.cpp" "C:/Users/SoKoL/Desktop/metOpt/1_lab/src/cmake-build-debug/CMakeFiles/1_lab.dir/GoldenRatio.cpp.obj"
   "C:/Users/SoKoL/Desktop/metOpt/1_lab/src/Parabola.cpp" "C:/Users/SoKoL/Desktop/metOpt/1_lab/src/cmake-build-debug/CMakeFiles/1_lab.dir/Parabola.cpp.obj"

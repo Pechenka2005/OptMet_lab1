@@ -92,6 +92,12 @@
 		<Unit filename="C:/Users/SoKoL/Desktop/metOpt/1_lab/src/Dichotomy.h">
 			<Option target="1_lab"/>
 		</Unit>
+		<Unit filename="C:/Users/SoKoL/Desktop/metOpt/1_lab/src/Fibonacci.cpp">
+			<Option target="1_lab"/>
+		</Unit>
+		<Unit filename="C:/Users/SoKoL/Desktop/metOpt/1_lab/src/Fibonacci.h">
+			<Option target="1_lab"/>
+		</Unit>
 		<Unit filename="C:/Users/SoKoL/Desktop/metOpt/1_lab/src/Function.cpp">
 			<Option target="1_lab"/>
 		</Unit>

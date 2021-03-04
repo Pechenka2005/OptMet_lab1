@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "1_lab.pdb"
   "CMakeFiles/1_lab.dir/CombinedBrent.cpp.obj"
   "CMakeFiles/1_lab.dir/Dichotomy.cpp.obj"
+  "CMakeFiles/1_lab.dir/Fibonacci.cpp.obj"
   "CMakeFiles/1_lab.dir/Function.cpp.obj"
   "CMakeFiles/1_lab.dir/GoldenRatio.cpp.obj"
   "CMakeFiles/1_lab.dir/Parabola.cpp.obj"

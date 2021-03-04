@@ -196,6 +196,33 @@ Dichotomy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1_lab.dir\build.make CMakeFiles/1_lab.dir/Dichotomy.cpp.s
 .PHONY : Dichotomy.cpp.s
 
+Fibonacci.obj: Fibonacci.cpp.obj
+
+.PHONY : Fibonacci.obj
+
+# target to build an object file
+Fibonacci.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1_lab.dir\build.make CMakeFiles/1_lab.dir/Fibonacci.cpp.obj
+.PHONY : Fibonacci.cpp.obj
+
+Fibonacci.i: Fibonacci.cpp.i
+
+.PHONY : Fibonacci.i
+
+# target to preprocess a source file
+Fibonacci.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1_lab.dir\build.make CMakeFiles/1_lab.dir/Fibonacci.cpp.i
+.PHONY : Fibonacci.cpp.i
+
+Fibonacci.s: Fibonacci.cpp.s
+
+.PHONY : Fibonacci.s
+
+# target to generate assembly for a file
+Fibonacci.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1_lab.dir\build.make CMakeFiles/1_lab.dir/Fibonacci.cpp.s
+.PHONY : Fibonacci.cpp.s
+
 Function.obj: Function.cpp.obj
 
 .PHONY : Function.obj
@@ -319,6 +346,9 @@ help:
 	@echo ... Dichotomy.obj
 	@echo ... Dichotomy.i
 	@echo ... Dichotomy.s
+	@echo ... Fibonacci.obj
+	@echo ... Fibonacci.i
+	@echo ... Fibonacci.s
 	@echo ... Function.obj
 	@echo ... Function.i
 	@echo ... Function.s

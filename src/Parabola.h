@@ -8,7 +8,7 @@
 
 #include "Function.h"
 
-class Parabola : public Function {
+class Parabola : Function {
 private:
     double a, b, eps;
     static double find_a_1(double x1, double x2);

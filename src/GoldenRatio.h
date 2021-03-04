@@ -8,7 +8,7 @@
 #include "Function.h"
 
 
-class GoldenRatio : public Function {
+class GoldenRatio : Function {
 private:
     double a, b, eps;
     const double tau = ((sqrt(5) - 1) / 2);
