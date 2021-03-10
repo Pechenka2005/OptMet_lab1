@@ -45,5 +45,5 @@ double Parabola::find_a_2(double x1, double x2, double x3) {
 }
 
 double Parabola::find_x_n(double x1, double x2, double x3) {
-    return (x1 + x2 + find_a_1(x1, x2) / find_a_2(x1, x2, x3)) / 2;
+    return (x1 + x2 - find_a_1(x1, x2) / find_a_2(x1, x2, x3)) / 2;
 }
