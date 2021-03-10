@@ -10,16 +10,16 @@
 
 class CombinedBrent {
 private:
-    double a, c, x, w, v, eps, step, prevStep, u;
+    double a, c, x, w, v, eps, d, e, u;
     const double K = ((sqrt(5) - 1) / 2);
 public:
     CombinedBrent(double a, double c, double eps) {
         this->a = a;
         this->c = c;
         this->eps = eps;
-        this->x = this->w = this->v = (c - a) * K;
-        this->u = (c + a) / 2;
-        this->step = this->prevStep = c - a;
+        this->x = this->w = this->v = a + K * (c - a) ;
+        this->u = (a + c) / 2;
+        this->d = this->e = c - a;
     }
 
     double evaluate();
