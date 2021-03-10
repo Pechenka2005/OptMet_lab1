@@ -27,6 +27,7 @@ CMakeFiles/1_lab.dir/Parabola.cpp.o: ../Parabola.h
 
 CMakeFiles/1_lab.dir/main.cpp.o: ../CombinedBrent.h
 CMakeFiles/1_lab.dir/main.cpp.o: ../Dichotomy.h
+CMakeFiles/1_lab.dir/main.cpp.o: ../Fibonacci.h
 CMakeFiles/1_lab.dir/main.cpp.o: ../Function.h
 CMakeFiles/1_lab.dir/main.cpp.o: ../GoldenRatio.h
 CMakeFiles/1_lab.dir/main.cpp.o: ../Parabola.h
