@@ -19,6 +19,7 @@ double Dichotomy::evaluate() {
             a = x1;
         }
         eps_n = (b - a) / 2;
+        intervals.emplace_back(std::make_pair(a, b));
     }
 
     return ((a + b) / 2);
@@ -29,4 +30,12 @@ void Dichotomy::setValue(double a, double b, double eps, double delta) {
     this->b = b;
     this->eps = eps;
     this->delta = delta;
+}
+
+std::vector<std::pair<double, double> > Dichotomy::getIntervals() {
+    evaluate();
+    for (int i = intervals.size(); i < 30; i++) {
+        intervals.emplace_back(std::make_pair(a, b));
+    }
+    return intervals;
 }

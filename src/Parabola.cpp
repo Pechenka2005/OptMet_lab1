@@ -4,6 +4,19 @@
 
 #include "Parabola.h"
 
+double Parabola::find_a_1(double x1, double x2) {
+    return (Function::evaluate(x2) - Function::evaluate(x1)) / (x2 - x1);
+}
+
+double Parabola::find_a_2(double x1, double x2, double x3) {
+    return ((Function::evaluate(x3) - Function::evaluate(x1)) / (x3 - x1) -
+    (Function::evaluate(x2) - Function::evaluate(x1)) / (x2 - x1)) / (x3 - x2);
+}
+
+double Parabola::find_x_n(double x1, double x2, double x3) {
+    return (x1 + x2 - find_a_1(x1, x2) / find_a_2(x1, x2, x3)) / 2;
+}
+
 double Parabola::evaluate() {
     double x1 = a;
     double x3 = b;
@@ -30,20 +43,18 @@ double Parabola::evaluate() {
             break;
         }
         eps_n = (x3 - x1) / 2;
+        intervals.emplace_back(std::make_pair(x3, x1));
     }
 
     return (x3 + x1) / 2;
 }
 
-double Parabola::find_a_1(double x1, double x2) {
-    return (Function::evaluate(x2) - Function::evaluate(x1)) / (x2 - x1);
+std::vector<std::pair<double, double> > Parabola::getIntervals() {
+    evaluate();
+    for (int i = intervals.size(); i < 30; i++) {
+        intervals.emplace_back(std::make_pair(intervals[intervals.size() - 1].first,
+                                              intervals[intervals.size() - 1].second));
+    }
+    return intervals;
 }
 
-double Parabola::find_a_2(double x1, double x2, double x3) {
-    return ((Function::evaluate(x3) - Function::evaluate(x1)) / (x3 - x1) -
-    (Function::evaluate(x2) - Function::evaluate(x1)) / (x2 - x1)) / (x3 - x2);
-}
-
-double Parabola::find_x_n(double x1, double x2, double x3) {
-    return (x1 + x2 - find_a_1(x1, x2) / find_a_2(x1, x2, x3)) / 2;
-}

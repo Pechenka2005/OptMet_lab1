@@ -36,6 +36,15 @@ double GoldenRatio::evaluate() {
             f2 = Function::evaluate(x2);
         }
         eps_n *= tau;
+        intervals.emplace_back(std::make_pair(a, b));
     }
     return (a + b) / 2;
+}
+
+std::vector<std::pair<double, double> > GoldenRatio::getIntervals() {
+    evaluate();
+    for (int i = intervals.size(); i < 30; i++) {
+        intervals.emplace_back(std::make_pair(a, b));
+    }
+    return intervals;
 }

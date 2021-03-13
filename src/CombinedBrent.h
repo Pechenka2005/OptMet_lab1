@@ -7,11 +7,15 @@
 
 #include "Function.h"
 #include <cmath>
+#include <vector>
+#include <utility>
 
-class CombinedBrent {
+class CombinedBrent : Function {
 private:
     double a, c, x, w, v, eps, d, e, u;
     const double K = ((sqrt(5) - 1) / 2);
+    std::vector<std::pair<double, double> > intervals;
+
 public:
     CombinedBrent(double a, double c, double eps) {
         this->a = a;
@@ -21,7 +25,7 @@ public:
         this->u = (a + c) / 2;
         this->d = this->e = c - a;
     }
-
+    std::vector<std::pair<double, double> > getIntervals();
     double evaluate();
 };
 

@@ -55,6 +55,7 @@ double Fibonacci::evaluate() {
             f1 = Function::evaluate(x1);
         }
         n++;
+        intervals.emplace_back(std::make_pair(a, b));
     }
 
     x2 = x1 + eps;
@@ -64,7 +65,16 @@ double Fibonacci::evaluate() {
     } else {
         b = x2;
     }
+    intervals.emplace_back(std::make_pair(a, b));
     return (a + b) / 2;
+}
+
+std::vector<std::pair<double, double> > Fibonacci::getIntervals() {
+    evaluate();
+    for (int i = intervals.size(); i < 30; i++) {
+        intervals.emplace_back(std::make_pair(a, b));
+    }
+    return intervals;
 }
 
 
