@@ -4,8 +4,10 @@
 
 #ifndef INC_1_LAB_GOLDENRATIO_H
 #define INC_1_LAB_GOLDENRATIO_H
-#include <cmath>
 #include "Function.h"
+#include <cmath>
+#include <vector>
+#include <utility>
 
 
 class GoldenRatio : Function {
@@ -14,6 +16,7 @@ private:
     const double tau = ((sqrt(5) - 1) / 2);
     double find_x1(double a, double b) const;
     double find_x2(double a, double b) const;
+    std::vector<std::pair<double, double> > intervals;
 
 public:
     GoldenRatio(double a, double b, double eps) {
@@ -23,6 +26,7 @@ public:
     }
     void setValue(double a, double b, double eps);
     double evaluate();
+    std::vector<std::pair<double, double> > getIntervals();
 };
 
 

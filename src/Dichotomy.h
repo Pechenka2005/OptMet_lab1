@@ -7,11 +7,14 @@
 
 
 #include "Function.h"
+#include <vector>
+#include <utility>
 
 class Dichotomy : Function {
 private:
     double a, b, eps, delta;
     static double find_x(double a, double b, double delta);
+    std::vector<std::pair<double, double> > intervals;
 
 public:
     Dichotomy(double a, double b, double eps, double delta) {
@@ -22,6 +25,7 @@ public:
     }
     void setValue(double a, double b, double eps, double delta);
     double evaluate();
+    std::vector<std::pair<double, double> > getIntervals();
 };
 
 

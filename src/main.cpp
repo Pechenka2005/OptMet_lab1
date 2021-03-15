@@ -8,7 +8,7 @@
 using namespace std;
 
 int main() {
-    Dichotomy res_d(-3, 7, 0.00001, 0.000001);
+    Dichotomy res_d(0.5, 4, 0.000001, 0.000001);
     cout << "Method Dichotomy: " << res_d.evaluate() << endl;
     Parabola res_p(0.5, 4, 0.00001);
     cout << "The parabola method: " << res_p.evaluate() << endl;

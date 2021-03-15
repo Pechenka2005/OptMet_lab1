@@ -75,7 +75,14 @@ double CombinedBrent::evaluate() {
             }
         }
 
-
+        intervals.emplace_back(std::make_pair(a, c));
     }
     return (a + c) / 2;
+}
+std::vector<std::pair<double, double> > CombinedBrent::getIntervals() {
+    evaluate();
+    for (int i = intervals.size(); i < 30; i++) {
+        intervals.emplace_back(std::make_pair(a, c));
+    }
+    return intervals;
 }
