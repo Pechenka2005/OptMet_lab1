@@ -32,7 +32,7 @@ double Parabola::evaluate() {
         eps_n = (x3 - x1) / 2;
     }
 
-    return (x3 + x1) / 2;
+    return x2;
 }
 
 double Parabola::find_a_1(double x1, double x2) {
