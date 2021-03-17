@@ -3,14 +3,13 @@
 //
 
 #include "CombinedBrent.h"
-#include "Parabola.h"
 
 double CombinedBrent::evaluate() {
     double eps_n = (c - a) / 2;
 
-    double f_x  = Function::evaluate(x);
-    double f_v  = f_x;
-    double f_w  = f_x;
+    double f_x = Function::evaluate(x);
+    double f_v = f_x;
+    double f_w = f_x;
     double f_u;
 
     while (eps_n > eps) {
@@ -24,8 +23,9 @@ double CombinedBrent::evaluate() {
         }
         if (Function::different(x, v, w)
             && Function::different(f_x, f_w, f_v)) {
-            temp_u = Parabola::find_x_n(x, w, v);
-            if ((temp_u > a || Function::equals(temp_u, a)) && (temp_u < c || Function::equals(temp_u, c)) && fabs(temp_u - x) < g / 2) {
+            temp_u = ParabolaUtils::find_x_n(x, w, v);
+            if ((temp_u > a || Function::equals(temp_u, a)) && (temp_u < c || Function::equals(temp_u, c)) &&
+                fabs(temp_u - x) < g / 2) {
                 u = temp_u;
                 if (u - a < 2 * tol || c - u < 2 * tol) {
                     u = x - Function::sign(x - (a + c) / 2) * tol;
@@ -79,6 +79,7 @@ double CombinedBrent::evaluate() {
     }
     return (a + c) / 2;
 }
+
 std::vector<std::pair<double, double> > CombinedBrent::getIntervals() {
     evaluate();
     for (int i = intervals.size(); i < 30; i++) {

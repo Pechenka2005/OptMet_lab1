@@ -29,11 +29,11 @@ void Fibonacci::setValue(double a, double b, double eps) {
 }
 
 double Fibonacci::find_x1(double a, double b, int n) const {
-    return (a + (b - a) * ((double)fib[n - 2] / fib[n]));
+    return (a + (b - a) * ((double) fib[n - 2] / fib[n]));
 }
 
 double Fibonacci::find_x2(double a, double b, int n) const {
-    return (a + (b - a) * ((double)fib[n - 1] / fib[n]));;
+    return (a + (b - a) * ((double) fib[n - 1] / fib[n]));;
 }
 
 double Fibonacci::evaluate() {

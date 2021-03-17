@@ -13,7 +13,9 @@
 class Dichotomy : Function {
 private:
     double a, b, eps, delta;
+
     static double find_x(double a, double b, double delta);
+
     std::vector<std::pair<double, double> > intervals;
 
 public:
@@ -23,8 +25,11 @@ public:
         this->eps = eps;
         this->delta = delta;
     }
+
     void setValue(double a, double b, double eps, double delta);
+
     double evaluate();
+
     std::vector<std::pair<double, double> > getIntervals();
 };
 

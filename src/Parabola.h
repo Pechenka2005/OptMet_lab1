@@ -6,18 +6,16 @@
 #define INC_1_LAB_PARABOLA_H
 
 #include "Function.h"
+#include "ParabolaUtils.h"
 #include <vector>
 #include <utility>
 
-class Parabola : Function {
+class Parabola : Function, ParabolaUtils {
 private:
     double a, b, eps;
     std::vector<std::pair<double, double> > intervals;
 
 public:
-    static double find_a_1(double x1, double x2);
-    static double find_a_2(double x1, double x2, double x3);
-    static double find_x_n(double x1, double x2, double x3);
     Parabola(double a, double b, double eps) {
         this->a = a;
         this->b = b;
@@ -25,6 +23,7 @@ public:
     }
 
     double evaluate();
+
     std::vector<std::pair<double, double> > getIntervals();
 };
 

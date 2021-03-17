@@ -13,7 +13,9 @@ public:
 protected:
 
     static double sign(double x);
+
     static bool equals(double x1, double x2);
+
     static bool different(double a, double b, double c);
 };
 

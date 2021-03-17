@@ -4,6 +4,7 @@
 
 #ifndef INC_1_LAB_GOLDENRATIO_H
 #define INC_1_LAB_GOLDENRATIO_H
+
 #include "Function.h"
 #include <cmath>
 #include <vector>
@@ -14,8 +15,11 @@ class GoldenRatio : Function {
 private:
     double a, b, eps;
     const double tau = ((sqrt(5) - 1) / 2);
+
     double find_x1(double a, double b) const;
+
     double find_x2(double a, double b) const;
+
     std::vector<std::pair<double, double> > intervals;
 
 public:
@@ -24,8 +28,11 @@ public:
         this->b = b;
         this->eps = eps;
     }
+
     void setValue(double a, double b, double eps);
+
     double evaluate();
+
     std::vector<std::pair<double, double> > getIntervals();
 };
 
