@@ -10,18 +10,10 @@
 #include <vector>
 #include <utility>
 
-struct Coefficients {
-    double a, b, c;
-    Coefficients(double a, double b, double c);
-};
-
-Coefficients::Coefficients(double a, double b, double c) : a(a), b(b), c(c) {}
-
 class Parabola : Function, ParabolaUtils {
 private:
     double a, b, eps;
     std::vector<std::pair<double, double> > intervals;
-    std::vector<Coefficients> coefficients;
 
 public:
     Parabola(double a, double b, double eps) {
@@ -33,7 +25,6 @@ public:
     double evaluate();
 
     std::vector<std::pair<double, double> > getIntervals();
-    std::vector<Coefficients> getCoefficients();
 };
 
 

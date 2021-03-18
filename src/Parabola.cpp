@@ -26,7 +26,6 @@ double Parabola::evaluate() {
     double eps_n = (b - a) / 2;
 
     intervals.emplace_back(std::make_pair(x1, x3));
-    coefficients.emplace_back(Coefficients(Function::evaluate(x1), find_a_1(x1, x2), find_a_2(x1, x2, x3)));
     while (eps_n > eps) {
         double x_n = find_x_n(x1, x2, find_a_1(x1, x2), find_a_2(x1, x2, x3));
         if (x1 < x_n && x_n < x2 && x2 < x3) {
@@ -48,7 +47,6 @@ double Parabola::evaluate() {
         }
         eps_n = (x3 - x1) / 2;
         intervals.emplace_back(std::make_pair(x1, x3));
-        coefficients.emplace_back(Coefficients(Function::evaluate(x1), find_a_1(x1, x2), find_a_2(x1, x2, x3)));
     }
 
     return x2;
@@ -61,12 +59,4 @@ std::vector<std::pair<double, double> > Parabola::getIntervals() {
                                               intervals[intervals.size() - 1].second));
     }
     return intervals;
-}
-
-std::vector<Coefficients> Parabola::getCoefficients() {
-    for (int i = intervals.size(); i < 30; i++) {
-        coefficients.emplace_back(coefficients[coefficients.size() - 1].a, coefficients[coefficients.size() - 1].b,
-                                  coefficients[coefficients.size() - 1].c);
-    }
-    return coefficients;
 }
