@@ -18,6 +18,12 @@ private:
     std::vector<std::pair<double, double> > intervals;
 
 public:
+    /*
+     * Constructor
+     * param1: Left border a given interval
+     * param2: Right border a given interval
+     * param3: (epsilon) accuracy
+     */
     Parabola(double a, double b, double eps) {
         this->a = a;
         this->b = b;
