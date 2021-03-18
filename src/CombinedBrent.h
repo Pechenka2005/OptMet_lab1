@@ -10,7 +10,9 @@
 #include <cmath>
 #include <vector>
 #include <utility>
-
+/*
+ * Class describing the combined brent method on a given interval
+ */
 class CombinedBrent : Function, ParabolaUtils {
 private:
     double a, c, x, w, v, eps, d, e, u;
@@ -18,6 +20,12 @@ private:
     std::vector<std::pair<double, double> > intervals;
 
 public:
+    /*
+     * Constructor
+     * param1: Left border a given interval
+     * param2: Right border a given interval
+     * param3: (epsilon) accuracy
+     */
     CombinedBrent(double a, double c, double eps) {
         this->a = a;
         this->c = c;
@@ -28,7 +36,10 @@ public:
     }
 
     std::vector<std::pair<double, double> > getIntervals();
-
+    /*
+     * A method that computes the minimum of a given
+     * function using the combined Brent method
+     */
     double evaluate();
 };
 

@@ -30,7 +30,10 @@ public:
     }
 
     void setValue(double a, double b, double eps);
-
+    /*
+     * A method that computes the minimum of a given
+     *      function using the Golden Ratio method
+     */
     double evaluate();
 
     std::vector<std::pair<double, double> > getIntervals();

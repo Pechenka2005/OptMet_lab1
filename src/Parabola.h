@@ -9,7 +9,9 @@
 #include "ParabolaUtils.h"
 #include <vector>
 #include <utility>
-
+/*
+ * Class describing the Parabola method on a given interval
+ */
 class Parabola : Function, ParabolaUtils {
 private:
     double a, b, eps;
@@ -21,7 +23,10 @@ public:
         this->b = b;
         this->eps = eps;
     }
-
+    /*
+     * A method that computes the minimum of a given
+     * function using the Parabola method
+     */
     double evaluate();
 
     std::vector<std::pair<double, double> > getIntervals();
