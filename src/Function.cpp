@@ -4,6 +4,7 @@
 
 #include "Function.h"
 #include <cmath>
+
 double Function::evaluate(double x) {
     return (x - log(x));
 }
@@ -21,7 +22,7 @@ bool Function::equals(double x1, double x2) {
 }
 
 bool Function::different(double a, double b, double c) {
-    if(equals(a, b) ||  equals(b, c) || equals(a,c)) {
+    if (equals(a, b) || equals(b, c) || equals(a, c)) {
         return false;
     }
     return true;
