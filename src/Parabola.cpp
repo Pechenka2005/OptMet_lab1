@@ -15,8 +15,13 @@ double ParabolaUtils::find_a_2(double x1, double x2, double x3) {
             (Function::evaluate(x2) - Function::evaluate(x1)) / (x2 - x1)) / (x3 - x2);
 }
 
+<<<<<<< HEAD
 double ParabolaUtils::find_x_n(double x1, double x2, double f1, double f2) {
     return (x1 + x2 - f1 / f2) / 2;
+=======
+double ParabolaUtils::find_x_n(double x1, double x2, double x3) {
+    return (x1 + x2 - find_a_1(x1, x2) / find_a_2(x1, x2, x3)) / 2;
+>>>>>>> 1d4da41815e972943625a87bb957295f9f557b68
 }
 
 double Parabola::evaluate() {

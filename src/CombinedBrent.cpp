@@ -23,7 +23,11 @@ double CombinedBrent::evaluate() {
         }
         if (Function::different(x, v, w)
             && Function::different(f_x, f_w, f_v)) {
+<<<<<<< HEAD
             temp_u = ParabolaUtils::find_x_n(x, w, find_a_1(x, w), find_a_2(x, w, v));
+=======
+            temp_u = ParabolaUtils::find_x_n(x, w, v);
+>>>>>>> 1d4da41815e972943625a87bb957295f9f557b68
             if ((temp_u > a || Function::equals(temp_u, a)) && (temp_u < c || Function::equals(temp_u, c)) &&
                 fabs(temp_u - x) < g / 2) {
                 u = temp_u;
