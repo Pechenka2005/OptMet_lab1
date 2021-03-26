@@ -12,6 +12,7 @@ int Fibonacci::find_n() {
             return i - 2;
         }
     }
+    return 0;
 }
 
 void Fibonacci::find_fibonacci() {
@@ -40,6 +41,7 @@ double Fibonacci::evaluate() {
     int max_n = find_n(), n = 1;
     double x1 = find_x1(a, b, max_n), x2 = find_x2(a, b, max_n);
     double f1 = Function::evaluate(x1), f2 = Function::evaluate(x2);
+    intervals.emplace_back(a, b);
     while (n <= max_n - 2) {
         if (f1 > f2) {
             a = x1;
@@ -55,7 +57,7 @@ double Fibonacci::evaluate() {
             f1 = Function::evaluate(x1);
         }
         n++;
-        intervals.emplace_back(std::make_pair(a, b));
+        intervals.emplace_back(a, b);
     }
 
     x2 = x1 + eps;
@@ -65,14 +67,14 @@ double Fibonacci::evaluate() {
     } else {
         b = x2;
     }
-    intervals.emplace_back(std::make_pair(a, b));
+    intervals.emplace_back(a, b);
     return (a + b) / 2;
 }
 
 std::vector<std::pair<double, double> > Fibonacci::getIntervals() {
     evaluate();
     for (int i = intervals.size(); i < 30; i++) {
-        intervals.emplace_back(std::make_pair(a, b));
+        intervals.emplace_back(a, b);
     }
     return intervals;
 }

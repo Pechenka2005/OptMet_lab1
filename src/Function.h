@@ -22,12 +22,14 @@ protected:
      * param1: double, the sign of which you want to know
      */
     static double sign(double x);
+
     /*
      * Tests for equality two numbers of the type
      * param1: the first number to compare for equality
      * param2: the second number to compare for equality
      */
     static bool equals(double x1, double x2);
+
     /*
      * Checks three doubles for the difference
      * params: values to compare by difference

@@ -21,6 +21,7 @@ void GoldenRatio::setValue(double a, double b, double eps) {
 double GoldenRatio::evaluate() {
     double x1 = find_x1(a, b), x2 = find_x2(a, b), eps_n = (tau * (b - a)) / 2;
     double f1 = Function::evaluate(x1), f2 = Function::evaluate(x2);
+    intervals.emplace_back(a, b);
     while (eps_n > eps) {
         if (f1 <= f2) {
             b = x2;
@@ -36,7 +37,7 @@ double GoldenRatio::evaluate() {
             f2 = Function::evaluate(x2);
         }
         eps_n *= tau;
-        intervals.emplace_back(std::make_pair(a, b));
+        intervals.emplace_back(a, b);
     }
     return (a + b) / 2;
 }
@@ -44,7 +45,7 @@ double GoldenRatio::evaluate() {
 std::vector<std::pair<double, double> > GoldenRatio::getIntervals() {
     evaluate();
     for (int i = intervals.size(); i < 30; i++) {
-        intervals.emplace_back(std::make_pair(a, b));
+        intervals.emplace_back(a, b);
     }
     return intervals;
 }

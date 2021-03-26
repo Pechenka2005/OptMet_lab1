@@ -19,13 +19,14 @@ double ParabolaUtils::find_x_n(double x1, double x2, double f1, double f2) {
     return (x1 + x2 - f1 / f2) / 2;
 
 }
+
 double Parabola::evaluate() {
     double x1 = a;
     double x3 = b;
     double x2 = (a + b) / 2;
     double eps_n = (b - a) / 2;
 
-    intervals.emplace_back(std::make_pair(x1, x3));
+    intervals.emplace_back(x1, x3);
     while (eps_n > eps) {
         double x_n = find_x_n(x1, x2, find_a_1(x1, x2), find_a_2(x1, x2, x3));
         if (x1 < x_n && x_n < x2 && x2 < x3) {
@@ -46,7 +47,7 @@ double Parabola::evaluate() {
             break;
         }
         eps_n = (x3 - x1) / 2;
-        intervals.emplace_back(std::make_pair(x1, x3));
+        intervals.emplace_back(x1, x3);
     }
 
     return x2;
@@ -55,8 +56,7 @@ double Parabola::evaluate() {
 std::vector<std::pair<double, double> > Parabola::getIntervals() {
     evaluate();
     for (int i = intervals.size(); i < 30; i++) {
-        intervals.emplace_back(std::make_pair(intervals[intervals.size() - 1].first,
-                                              intervals[intervals.size() - 1].second));
+        intervals.emplace_back(intervals[intervals.size() - 1].first, intervals[intervals.size() - 1].second);
     }
     return intervals;
 }

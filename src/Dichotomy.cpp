@@ -10,6 +10,7 @@ double Dichotomy::find_x(double a, double b, double delta) {
 
 double Dichotomy::evaluate() {
     double eps_n = (b - a) / 2;
+    intervals.emplace_back(a, b);
     while (eps_n > eps) {
         double x1 = find_x(a, b, -delta), x2 = find_x(a, b, delta);
         if (Function::evaluate(x1) <= Function::evaluate(x2)) {
@@ -18,10 +19,10 @@ double Dichotomy::evaluate() {
             a = x1;
         }
         eps_n = (b - a) / 2;
-        intervals.emplace_back(std::make_pair(a, b));
+        intervals.emplace_back(a, b);
     }
 
-    return (b + a) / 2;
+    return ((a + b) / 2);
 }
 
 void Dichotomy::setValue(double a, double b, double eps, double delta) {
@@ -34,7 +35,7 @@ void Dichotomy::setValue(double a, double b, double eps, double delta) {
 std::vector<std::pair<double, double> > Dichotomy::getIntervals() {
     evaluate();
     for (int i = intervals.size(); i < 30; i++) {
-        intervals.emplace_back(std::make_pair(a, b));
+        intervals.emplace_back(a, b);
     }
     return intervals;
 }

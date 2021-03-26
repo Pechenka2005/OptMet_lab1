@@ -9,12 +9,14 @@
 #include "Function.h"
 #include <vector>
 #include <utility>
+
 /*
  * Class describing the Dichotomy method on a given interval
  */
 class Dichotomy : Function {
 private:
     double a, b, eps, delta;
+
     /*
      * Method that finds the minimum at the current iteration
      * param1: current left border interval
@@ -41,6 +43,7 @@ public:
     }
 
     void setValue(double a, double b, double eps, double delta);
+
     /*
      * A method that computes the minimum of a given
      * function using Dichotomy method
