@@ -70,7 +70,7 @@ double Fibonacci::evaluate() {
         b = x2;
     }
     intervals.emplace_back(std::make_pair(a, b));
-    return std::cout << calcFunction, (a + b) / 2;
+    return std::cout << calcFunction << " ", (a + b) / 2;
 
 }
 

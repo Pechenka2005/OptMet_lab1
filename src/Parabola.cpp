@@ -54,7 +54,7 @@ double Parabola::evaluate() {
         intervals.emplace_back(x1, x3);
     }
 
-    return std::cout << calcFunction, x2;
+    return std::cout << calcFunction << " ", x2;
 }
 
 std::vector<std::pair<double, double> > Parabola::getIntervals() {

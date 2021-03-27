@@ -41,7 +41,7 @@ double GoldenRatio::evaluate() {
         eps_n *= tau;
         intervals.emplace_back(a, b);
     }
-    return std::cout << calcFunction, (a + b) / 2;
+    return std::cout << calcFunction << " ", (a + b) / 2;
 }
 
 std::vector<std::pair<double, double> > GoldenRatio::getIntervals() {

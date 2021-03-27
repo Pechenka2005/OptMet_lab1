@@ -84,7 +84,7 @@ double CombinedBrent::evaluate() {
 
         intervals.emplace_back(usedParabola, a, c);
     }
-    return std::cout << calcFunction, (a + c) / 2;
+    return std::cout << calcFunction << " ", (a + c) / 2;
 }
 
 std::vector<std::tuple<bool, double, double> > CombinedBrent::getIntervals() {

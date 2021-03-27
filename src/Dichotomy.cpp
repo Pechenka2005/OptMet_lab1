@@ -25,7 +25,7 @@ double Dichotomy::evaluate() {
         intervals.emplace_back(a, b);
     }
 
-    return std::cout << calcFunction, (b + a) / 2;
+    return std::cout << calcFunction << " ", (b + a) / 2;
 }
 
 void Dichotomy::setValue(double a, double b, double eps, double delta) {
