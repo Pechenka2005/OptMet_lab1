@@ -3,13 +3,14 @@
 //
 
 #include "Dichotomy.h"
-
+#include <iostream>
 double Dichotomy::find_x(double a, double b, double delta) {
     return ((a + b + delta) / 2);
 }
 
 double Dichotomy::evaluate() {
     double eps_n = (b - a) / 2;
+    double calcFunction = 0;
     while (eps_n > eps) {
         double x1 = find_x(a, b, -delta), x2 = find_x(a, b, delta);
         if (Function::evaluate(x1) <= Function::evaluate(x2)) {
@@ -17,11 +18,12 @@ double Dichotomy::evaluate() {
         } else {
             a = x1;
         }
+        calcFunction += 2;
         eps_n = (b - a) / 2;
         intervals.emplace_back(std::make_pair(a, b));
     }
 
-    return (b + a) / 2;
+    return std::cout << calcFunction, (b + a) / 2;
 }
 
 void Dichotomy::setValue(double a, double b, double eps, double delta) {

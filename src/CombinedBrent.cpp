@@ -1,7 +1,7 @@
 //
 // Created by Сергей on 03.03.2021.
 //
-
+#include <iostream>
 #include "CombinedBrent.h"
 
 double CombinedBrent::evaluate() {
@@ -11,7 +11,7 @@ double CombinedBrent::evaluate() {
     double f_v = f_x;
     double f_w = f_x;
     double f_u;
-
+    double calcFunction = 1;
     while (eps_n > eps) {
         double g = e;
         e = d;
@@ -24,6 +24,7 @@ double CombinedBrent::evaluate() {
         if (Function::different(x, v, w)
             && Function::different(f_x, f_w, f_v)) {
             temp_u = ParabolaUtils::find_x_n(x, w, find_a_1(x, w), find_a_2(x, w, v));
+            calcFunction += 3;
             if ((temp_u > a || Function::equals(temp_u, a)) && (temp_u < c || Function::equals(temp_u, c)) &&
                 fabs(temp_u - x) < g / 2) {
                 u = temp_u;
@@ -46,6 +47,7 @@ double CombinedBrent::evaluate() {
         }
         d = fabs(x - u);
         f_u = Function::evaluate(u);
+        calcFunction++;
         if (f_u < f_x) {
             if (u > x || Function::equals(u, x)) {
                 a = x;
@@ -77,7 +79,7 @@ double CombinedBrent::evaluate() {
 
         intervals.emplace_back(std::make_pair(a, c));
     }
-    return (a + c) / 2;
+    return std::cout << calcFunction, (a + c) / 2;
 }
 
 std::vector<std::pair<double, double> > CombinedBrent::getIntervals() {

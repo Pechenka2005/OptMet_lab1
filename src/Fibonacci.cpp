@@ -3,7 +3,7 @@
 //
 
 #include "Fibonacci.h"
-
+#include <iostream>
 int Fibonacci::find_n() {
     find_fibonacci();
     double comparable = (b - a) / eps;
@@ -38,6 +38,7 @@ double Fibonacci::find_x2(double a, double b, int n) const {
 
 double Fibonacci::evaluate() {
     int max_n = find_n(), n = 1;
+    double calcFunction = 2;
     double x1 = find_x1(a, b, max_n), x2 = find_x2(a, b, max_n);
     double f1 = Function::evaluate(x1), f2 = Function::evaluate(x2);
     while (n <= max_n - 2) {
@@ -54,6 +55,7 @@ double Fibonacci::evaluate() {
             f2 = f1;
             f1 = Function::evaluate(x1);
         }
+        calcFunction++;
         n++;
         intervals.emplace_back(std::make_pair(a, b));
     }
@@ -66,7 +68,7 @@ double Fibonacci::evaluate() {
         b = x2;
     }
     intervals.emplace_back(std::make_pair(a, b));
-    return (a + b) / 2;
+    return std::cout << calcFunction, (a + b) / 2;
 }
 
 std::vector<std::pair<double, double> > Fibonacci::getIntervals() {
