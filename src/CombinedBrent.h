@@ -10,6 +10,8 @@
 #include <cmath>
 #include <vector>
 #include <utility>
+#include <tuple>
+
 /*
  * Class describing the combined brent method on a given interval
  */
@@ -17,7 +19,7 @@ class CombinedBrent : Function, ParabolaUtils {
 private:
     double a, c, x, w, v, eps, d, e, u;
     const double K = ((sqrt(5) - 1) / 2);
-    std::vector<std::pair<double, double> > intervals;
+    std::vector<std::tuple<bool, double, double> > intervals;
 
 public:
     /*
@@ -35,7 +37,8 @@ public:
         this->d = this->e = c - a;
     }
 
-    std::vector<std::pair<double, double> > getIntervals();
+    std::vector<std::tuple<bool, double, double> > getIntervals();
+
     /*
      * A method that computes the minimum of a given
      * function using the combined Brent method

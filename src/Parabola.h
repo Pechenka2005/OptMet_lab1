@@ -9,6 +9,7 @@
 #include "ParabolaUtils.h"
 #include <vector>
 #include <utility>
+
 /*
  * Class describing the Parabola method on a given interval
  */
@@ -29,6 +30,7 @@ public:
         this->b = b;
         this->eps = eps;
     }
+
     /*
      * A method that computes the minimum of a given
      * function using the Parabola method

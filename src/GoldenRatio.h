@@ -17,12 +17,14 @@ class GoldenRatio : Function {
 private:
     double a, b, eps;
     const double tau = ((sqrt(5) - 1) / 2);
+
     /*
     * finding the first division point of the current segment
     * param1: left border current interval
     * param2: right border current interval
     */
     double find_x1(double a, double b) const;
+
     /*
     * finding the second division point of the current segment
     * param1: left border current interval
@@ -46,6 +48,7 @@ public:
     }
 
     void setValue(double a, double b, double eps);
+
     /*
      * A method that computes the minimum of a given
      * function using the Golden Ratio method

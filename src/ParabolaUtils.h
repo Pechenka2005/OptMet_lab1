@@ -4,6 +4,7 @@
 
 #ifndef INC_1_LAB_PARABOLAUTILS_H
 #define INC_1_LAB_PARABOLAUTILS_H
+
 /*
  * Class containing helper methods for the Parabolas Method
  */
@@ -15,6 +16,7 @@ protected:
      * param2: second calculated value
      */
     static double find_a_1(double x1, double x2);
+
     /*
      * method of finding a2 approximating parabola
      * param1: first calculated value
@@ -22,6 +24,7 @@ protected:
      * param3: third calculated value
      */
     static double find_a_2(double x1, double x2, double x3);
+
     /*
      * method of finding min approximating parabola
      * param1: first calculated value

@@ -8,6 +8,7 @@
 #include "Function.h"
 #include <vector>
 #include <utility>
+
 /*
  * Class describing Fibonacci method on a given interval
  */
@@ -16,16 +17,19 @@ private:
     double a, b, eps;
     int maxNumberOfFib = 50;
     int fib[100]{};
+
     /*
      * finding the number of the fibonacci
      * number to execute the method
      */
     int find_n();
+
     /*
      * finding the fibonacci number
      * to execute the method
      */
     void find_fibonacci();
+
     /*
      * finding the first division point of the current segment
      * param1: left border current interval
@@ -33,6 +37,7 @@ private:
      * param3: iteration number
      */
     double find_x1(double a, double b, int n) const;
+
     /*
      * finding the second division point of the current segment
      * param1: left border current interval
@@ -57,6 +62,7 @@ public:
     }
 
     void setValue(double a, double b, double eps);
+
     /*
      * A method that computes the minimum of a given
      * function using Fibonacci method
